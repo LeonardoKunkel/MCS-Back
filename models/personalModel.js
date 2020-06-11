@@ -5,11 +5,15 @@ const personalSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    apellido: {
+    apellidoPaterno: {
         type: String,
         require: true
     },
-    apellidos: {
+    apellidoMaterno: {
+        type: String,
+        require: true
+    },
+    nombreEmpresa: {
         type: String,
         require: true
     }

@@ -1,6 +1,7 @@
 const express = require('express'),
       bodyParser = require('body-parser'),
       mongoose = require('mongoose'),
+      personalRuta = require('./routes/personalRuta'),
       app = express(),
       cors = require('cors');
 
@@ -13,6 +14,8 @@ mongoose.connect("mongodb://localhost:27017/CMS", { useNewUrlParser: true, useCr
 app.use(cors({origin: true, credentials: true}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+app.use('/personal', personalRuta);
 
 //Rutas
 app.get('/', (req, res) => {
