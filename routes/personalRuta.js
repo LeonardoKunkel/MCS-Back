@@ -1,4 +1,4 @@
-const express = rrequire('express'),
+const express = require('express'),
       personalModel = require('../models/personalModel'),
       router = express.Router();
       
